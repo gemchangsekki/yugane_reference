@@ -3,3 +3,19 @@
   height: 80px;
   background-color: aqua;
 }
+
+.hero-sec {
+  position: relative;
+  background: url(../img/hero-img0.png) no-repeat center / cover;
+  width: 1920px;
+  height: 1080px;
+}
+.hero-sec-btn-list-wrap {
+  position: absolute;
+  bottom: 1.875rem;
+
+}
+.hero-sec-btn-list {
+  display: flex;
+  gap: 1.375rem;
+}

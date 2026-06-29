@@ -6,28 +6,19 @@
   <link rel="stylesheet" href="../css/cssReset.css">
   <link rel="stylesheet" href="../css/main.css">
   <title>hero sec test</title>
-  <style>
-    .hero-sec {
-      background: url(../img/hero-img0.png) no-repeat center / cover;
-      width: 1920px;
-      height: 1080px;
-    }
-    .hero-sec-btn-list li {
-      list-style: none;
-    }
-  </style>
 </head>
 <body>
   <div class="hero-sec" id="hero-sec">
-    
+    <div class="hero-sec-btn-list-wrap">
+      <ul class="hero-sec-btn-list">
+        <li><button class="hero-sec-btn">1981</button></li>
+        <li><button class="hero-sec-btn">1990</button></li>
+        <li><button class="hero-sec-btn">2000</button></li>
+        <li><button class="hero-sec-btn">2010</button></li>
+        <li><button class="hero-sec-btn">2026</button></li>
+      </ul>
+    </div>
   </div>
-  <ul class="hero-sec-btn-list">
-    <li><button class="hero-sec-btn">1981</button></li>
-    <li><button class="hero-sec-btn">1990</button></li>
-    <li><button class="hero-sec-btn">2000</button></li>
-    <li><button class="hero-sec-btn">2010</button></li>
-    <li><button class="hero-sec-btn">2026</button></li>
-  </ul>
   <script>
     const heroSec = document.getElementById("hero-sec");
     const heroSecBtn = document.querySelectorAll(".hero-sec-btn");
