@@ -6,7 +6,7 @@
   <title>hero sec test</title>
   <style>
     .hero-sec {
-      background: url(../img/hero-img01.png) no-repeat center / cover;
+      background: url(../img/hero-img0.png) no-repeat center / cover;
       width: 1920px;
       height: 1080px;
     }
@@ -27,26 +27,14 @@
     <li><button class="hero-sec-btn">2026</button></li>
   </ul>
   <script>
-    let imgUrlNumber = 0;
-    let imgUrl = "../img/hero-img03.png";
-    
+    const heroSec = document.getElementById("hero-sec");
     const heroSecBtn = document.querySelectorAll(".hero-sec-btn");
-    const heroSecBtnArray = Array.from(heroSecBtn);
-
-    console.log(heroSecBtn[0].textContent);
-
-    console.log(heroSecBtnArray);
    
     heroSecBtn.forEach((button, index) => {
       button.addEventListener("click", () => {
-        console.log(index);
-        
+        heroSec.style.background = `url("../img/hero-img${index}.png")  no-repeat center / cover`;
       })
     })
-    // heroSecBtn.forEach(btn => {
-    //   btn.addEventListener("click", () => {
-    //   })
-    // })
   </script>
 </body>
 </html>
