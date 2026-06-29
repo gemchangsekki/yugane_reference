@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/css/default.css">
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <!-- Demo styles -->
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="card-wrapper">
+          <img src="../img/food-slide-figure03.webp" alt="">
+          <div class="text-container">
+            <p class="menu-title">
+              점심을 책임지는
+              <br>
+              <em class="menu-name">철판볶음밥</em>
+            </p>
+            <p class="menu-desc">
+              업계에서 가장 전문화된
+              <br>
+              '볶음밥 서비스'를 제공으로
+              <br>
+              볶음밥에 대한 니즈가 매우 강력합니다.
+            </p>
+            <div class="flex-horizontal">
+              <p class="menu-margin">볶음밥 일 최고 매출</p>
+              <p class="margin-price">305만원</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card-wrapper">
+          <img src="../img/food-slide-figure01.webp" alt="">
+          <div class="text-container">
+            <p class="menu-title">
+              가족외식과 데이트는
+              <br>
+              <em class="menu-name">철판닭갈비</em>
+            </p>
+            <p class="menu-desc">
+              다양한 종류(오리지널, 치즈, 로제, 청양마요, 치폴레)의
+              <br>
+              닭갈비 제공으로 선택의 폭이 넓어
+              <br>
+              어떠한 니즈의 손님도 놓치지 않습니다.
+            </p>
+            <div class="flex-horizontal">
+              <p class="menu-margin">닭갈비 일 최고 매출</p>
+              <p class="margin-price">946만원</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card-wrapper">
+          <img src="../img/food-slide-figure02.webp" alt="">
+          <div class="text-container">
+            <p class="menu-title">
+              테이블 단가를 높이는
+              <br>
+              <em class="menu-name">막국수</em>
+            </p>
+            <p class="menu-desc">
+              10여종의 추가 메뉴를 통해
+              <br>
+              높은 테이블 단가를 완성합니다.
+            </p>
+            <div class="flex-horizontal">
+              <p class="menu-margin">사이드 메뉴 일 최고 매출</p>
+              <p class="margin-price">137만원</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "cards",
+      loop: true,
+    });
+  </script>
+</body>
+
+</html>
