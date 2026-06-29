@@ -11,20 +11,13 @@
   height: 100dvh;
 }
 .header {
-  display: flex;
-  justify-content: center;
   padding-top: 3rem;
 }
 .header-inner {
-  flex-grow: 1;
-  flex-basis: 0;
   display: flex;
-  gap: 1.25rem;
+  justify-content: space-between;
   max-width: 100rem;
   padding-inline: 1.875rem;
-}
-.header-center{
-  align-items: center;
 }
 .header-side:last-child {
   justify-content: end;
