@@ -27,10 +27,22 @@
     <li><button class="hero-sec-btn">2026</button></li>
   </ul>
   <script>
+    let imgUrlNumber = 0;
     let imgUrl = "../img/hero-img03.png";
     
-    const heroSecBtn = document.querySelectorAll(".hero-sec-btn-list");
+    const heroSecBtn = document.querySelectorAll(".hero-sec-btn");
+    const heroSecBtnArray = Array.from(heroSecBtn);
 
+    console.log(heroSecBtn[0].textContent);
+
+    console.log(heroSecBtnArray);
+   
+    heroSecBtn.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        console.log(index);
+        
+      })
+    })
     // heroSecBtn.forEach(btn => {
     //   btn.addEventListener("click", () => {
     //   })
