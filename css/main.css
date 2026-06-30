@@ -85,7 +85,33 @@ html, body {
   background-color: salmon;
 }
 .revenue-sec-left {
+  display: flex;
+  flex-direction: column;
   width: 50%;
   height: 100%;
+  padding-top: 6.25rem;
   background-color: yellow;
+}
+.revenue-sec-left-desc-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.revenue-sec-left-title .desc-60 {
+  font-size: 3.75rem;
+  letter-spacing: -0.04em;
+  line-height: 1.16;
+}
+.revenue-sec-left-title .desc-70 {
+  font-size: 4.375rem;
+  letter-spacing: -0.04em;
+  line-height: 1.14;
+}
+
+.revenue-sec-left-title .desc-70 .primary {
+  font-weight: 700;
+  color: #f55313;
+}
+.revenue-sec-left-title .desc-70 .secondary {
+  font-weight: 700;
 }
