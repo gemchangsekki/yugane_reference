@@ -1,0 +1,43 @@
+/* assets/css/font.css */
+
+@import "tailwindcss";
+/* 프리텐다드 가변(variable) 폰트 선언 */
+
+@font-face {
+  font-family: 'Pretendard-VF';
+  src: url('../font/PretendardVariable.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* suit 가변(variable) 폰트 선언 */
+/* 관리자 페이지에서 suit폰트 자주 사용 */
+@font-face {
+  font-family: 'SUIT-VF';
+  src: url('../font/SUIT-Variable.woff2') format('woff2'); /* woff2로 입력해도 woff2-variations로 인식 가능 */
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 웹사이트의 기본 본문 폰트 전체지정 */
+body {
+  font-family: 'Pretendard-VF', -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.4; /* 1로 설정하면 모바일 페이지 등에서도 줄바꿈 없이 표시 됨 */
+}
+
+/* @theme {
+  --font-sans: 'Pretendard-VF', -apple-system, sans-serif;
+} */
+
+/* word-break 속성은 한글은 keep-all을 자주 사용하지만
+  영문 사이트를 제작 할때는 break-all을 사용하게 된다.
+*/
+
+/*
+  1줄 말줄임 set
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+*/
