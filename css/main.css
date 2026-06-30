@@ -1,7 +1,21 @@
 .nav-bar {
-  
-  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.125rem;
   background-color: aqua;
+  padding: 0 1.875rem;
+}
+.nav-bar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 1.125rem;
+}
+
+.nav-bar a {
+  text-decoration: none;
 }
 
 .hero-sec {
