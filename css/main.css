@@ -6,7 +6,7 @@
 
 .hero-sec {
   position: relative;
-  background: url(/reference/yugane_reference/img/hero-img4.png) no-repeat center / cover;
+  background: url(../img/hero-img4.png) no-repeat center / cover;
   width: 100dvw;
   height: 100dvh;
 }
