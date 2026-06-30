@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/cssReset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>유가네</title>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <nav>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="#">히어로 섹션</a></li>
+            <li><a href="#">창업비용 섹션</a></li>
+            <li><a href="#">매출 섹션</a></li>
+            <li><a href="#">메뉴 셕센</a></li>
+            <li><a href="#">브랜드 마케팅</a></li>
+            <li><a href="#">창업문의</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="hero-sec" id="hero-sec">
+        <div class="header-wrap">
+          <header class="header" id="header">
+            <div class="header-inner">
+              <div class="header-side">
+                <h1>
+                  <a href="#">
+                    <img src="img/logo.png" alt="유가네 닭갈비 로고">
+                  </a>
+                </h1>
+              </div>
+              <div class="header-side">
+                <p class="header-tel">
+                  가맹문의
+                  <br class="visible-mobile" style="display: none;">
+                  1611.9922
+                </p>
+              </div>
+            </div>
+          </header>
+        </div>
+        <div class="hero-sec-btn-list-wrap">
+          <ul class="hero-sec-btn-list">
+            <li><button class="hero-sec-btn" id="hero-sec-btn">1981</button></li>
+            <li><button class="hero-sec-btn" id="hero-sec-btn">1990</button></li>
+            <li><button class="hero-sec-btn" id="hero-sec-btn">2000</button></li>
+            <li><button class="hero-sec-btn" id="hero-sec-btn">2010</button></li>
+            <li><button class="hero-sec-btn" id="hero-sec-btn">2026</button></li>
+          </ul>
+        </div>
+      </div>
+       <script>
+        const heroSec = document.getElementById("hero-sec");
+        const heroSecBtn = document.querySelectorAll("#hero-sec-btn");
+      
+        heroSecBtn.forEach((button, index) => {
+          button.addEventListener("click", () => {
+            heroSec.style.background = `url("img/hero-img${index}.png")  no-repeat center / cover`;
+          })
+        })
+      </script>
+    </main>
+    <footer></footer>
+  </div>
+</body>
+</html>
