@@ -1,7 +1,11 @@
+html, body {
+  overflow-x: hidden;
+}
+
 /* navigation */
 .navigation {
   position: fixed;
-  width: 100dvw;
+  width: 100vw;
   z-index: 9999;
 }
 .nav-bar {
@@ -28,8 +32,8 @@
 .hero-sec {
   position: relative;
   background: url(/yugane_reference/img/hero-img4.png) no-repeat center / cover;
-  width: 100dvw;
-  height: 100dvh;
+  width: 100vw;
+  height: 100vh;
 }
 .header {
   padding-top: 3rem;
@@ -71,17 +75,17 @@
 
 /* revenue-sec */
 .revenue-sec {
-  width: 100dvw;
+  width: 100vw;
   height: 62.5rem;
   background-color: aqua;
 }
 .revenue-sec-wrap {
-  width: 100dvw;
+  width: 100%;
   height: 100%;
   background-color: salmon;
 }
 .revenue-sec-left {
-  width: 50dvw;
+  width: 50%;
   height: 100%;
   background-color: yellow;
 }
