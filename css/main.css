@@ -1,6 +1,8 @@
+/* navigation */
 .navigation {
   position: fixed;
-  width: 100%;
+  width: 100dvw;
+  z-index: 9999;
 }
 .nav-bar {
   display: flex;
@@ -22,6 +24,7 @@
   text-decoration: none;
 }
 
+/* hero-sec */
 .hero-sec {
   position: relative;
   background: url(/yugane_reference/img/hero-img4.png) no-repeat center / cover;
@@ -64,4 +67,21 @@
   background-color: rgba(0, 0, 0, 0);
   color: #fff;
   cursor: pointer;
+}
+
+/* revenue-sec */
+.revenue-sec {
+  width: 100dvw;
+  height: 62.5rem;
+  background-color: aqua;
+}
+.revenue-sec-wrap {
+  width: 100dvw;
+  height: 100%;
+  background-color: salmon;
+}
+.revenue-sec-left {
+  width: 50dvw;
+  height: 100%;
+  background-color: yellow;
 }
