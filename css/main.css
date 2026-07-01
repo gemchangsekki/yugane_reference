@@ -94,14 +94,19 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 62.5rem;
+  height: calc(62.5rem - 6.25rem);
   padding-top: 6.25rem;
   background-color: yellow;
+  overflow: hidden;
 }
 .revenue-sec-left-desc-box {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 3.375rem;
+}
+.revenue-sec-left-title{
+  margin-bottom: 1.625rem;
 }
 .revenue-sec-left-title .desc-60 {
   font-size: 3.75rem;
@@ -120,6 +125,15 @@ html, body {
 }
 .revenue-sec-left-title .desc-70 .secondary {
   font-weight: 700;
+}
+.revenue-sec-left-desc {
+  font-size: 1.25rem;
+}
+.revenue-sec-left-desc em {
+  font-weight: 700;
+}
+.revenue-sec-left img {
+  width: 63.4375rem;
 }
 
 .revenue-sec-right {
