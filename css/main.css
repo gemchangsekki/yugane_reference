@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   overflow-x: hidden;
 }
@@ -93,8 +97,9 @@ html, body {
 .revenue-sec-left {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 50%;
-  height: calc(62.5rem - 6.25rem);
+  height: 62.5rem;
   padding-top: 6.25rem;
   background-color: yellow;
   overflow: hidden;
@@ -132,7 +137,48 @@ html, body {
 .revenue-sec-left-desc em {
   font-weight: 700;
 }
-.revenue-sec-left img {
+.revenue-sec-left-chat-box {
+  width: 20.625rem;
+  height: 16.625rem;
+  padding-top: 2.125rem;
+  margin: 0 auto;
+  background: url(../img/change-chat-box.webp) no-repeat center / cover;
+  text-align: center;
+  z-index: 5;
+}
+.revenue-sec-left-chat-box-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.44;
+}
+.revenue-sec-left-chat-box-answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #6d6d6d;
+  letter-spacing: -0.04em;
+  line-height: 1.5;
+}
+.revenue-sec-left-chat-box-answer::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #2a9a30;
+}
+.revenue-sec-left-food-img {
+  position: absolute;
+  top: 31.875rem;
+  left: calc(50% - 32.5rem);
+  z-index: 3;
+}
+.revenue-sec-left-food-img img {
   width: 63.4375rem;
 }
 
