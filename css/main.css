@@ -206,5 +206,6 @@ html, body {
 .revenue-sec-right {
   width: 50%;
   height: 62.5rem;
+  padding-top: 6.25rem;
   background-color: peachpuff;
 }
