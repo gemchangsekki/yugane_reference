@@ -94,6 +94,8 @@ html, body {
   height: 100%;
   background-color: salmon;
 }
+
+/* revenue-sec-left */
 .revenue-sec-left {
   display: flex;
   flex-direction: column;
@@ -203,9 +205,39 @@ html, body {
   width: 63.4375rem;
 }
 
+/* revenue-sec-right */
 .revenue-sec-right {
   width: 50%;
   height: 62.5rem;
   padding-top: 6.25rem;
   background-color: peachpuff;
+  overflow: hidden;
+}
+.revenue-sec-right-desc-box {
+  margin-bottom: 3.125rem;
+  text-align: center;
+}
+.revenue-sec-right-desc-box-label {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.56;
+  margin-bottom: 0.625rem;
+  color: #f55313;
+}
+.revenue-sec-right-desc-box-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 70px;
+  padding: 0 1.185rem;
+  border-radius: 4.375rem;
+  margin: 0 auto;
+  font-size: 2.8125rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.25;
+  color: #fff;
+  background-color: #f55313;
 }
