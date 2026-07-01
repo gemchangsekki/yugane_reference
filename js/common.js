@@ -18,3 +18,13 @@ heroSecBtn.forEach((button, index) => {
   heroSec.style.background = `url("img/hero-img${index}.png")  no-repeat center / cover`;
   })
 })
+
+const swiper = new Swiper(".revenue-sec-swiper", {
+  autoplay: {
+    delay: 2000,
+  },
+  spaceBetween: 30,
+  slidePerView: 'auto',
+  centeredSlides: true,
+  loop: true,
+})
