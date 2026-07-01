@@ -164,6 +164,14 @@ html, body {
   letter-spacing: -0.04em;
   line-height: 1.5;
 }
+.revenue-sec-left-chat-box-answer::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #2a9a30;
+}
 .revenue-sec-chat-box-circle {
   display: flex;
   flex-direction: column;
@@ -179,13 +187,11 @@ html, body {
 .revenue-sec-chat-box-circle:hover {
   transform: scale(1.05);
 }
-.revenue-sec-left-chat-box-answer::before {
-  content: "";
-  display: block;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: #2a9a30;
+.revenue-sec-chat-box-desc {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.5;
 }
 .revenue-sec-left-food-img {
   position: absolute;
