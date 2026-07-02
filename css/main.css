@@ -275,3 +275,13 @@ html, body {
 .revenue-sec {
   padding: 6.25rem 0;
 }
+
+.revenue-badge {
+  background: url(../img/chance-badge.webp) no-repeat center / cover;
+  display: flex;
+  flex-direction: column;
+  width: 11.8125rem;
+  height: 11.75rem;
+  justify-content: center;
+  text-align: center;
+}
