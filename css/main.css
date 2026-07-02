@@ -337,6 +337,14 @@ html, body {
   border-radius: 3.125rem;
   background-color: #fff;
 }
+.list-info {
+  color: #e02a1d;
+}
+.revenue-list .list-info-title {
+  font-size: 1.875rem;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.125rem;
+}
 
 .revenue-badge {
   position: absolute;
@@ -349,4 +357,16 @@ html, body {
   right: -2.5625rem;
   justify-content: center;
   text-align: center;
+}
+.badge-value {
+  font-size: 3.75rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.16;
+}
+.badge-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.41;
 }
