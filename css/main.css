@@ -274,14 +274,79 @@ html, body {
 /* revenue-sec */
 .revenue-sec {
   padding: 6.25rem 0;
+  background-color: #f7f4ef;
+}
+.revenue-head {
+  text-align: center;
+  margin-bottom: 5.3125rem;
+}
+.revenue-title {
+  font-size: 4.375rem;
+  letter-spacing: -0.04em;
+  line-height: 1.14;
+  margin-bottom: 1.625rem;
+}
+.revenue-title em {
+  font-weight: 700;
+  color: #f55313;
+}
+.revenue-desc {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.04;
+  line-height: 1.5;
+}
+.revenue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8.125rem;
+}
+.revenue-list.inner {
+  max-width: 75rem;
+  padding: 0 1.875rem;
+  margin: 0 auto;
+}
+.revenue-list .list-item {
+  position: relative;
+  display: flex;
+}
+.revenue-list .list-area01 {
+  position: relative;
+  width: 48.125rem;
+  height: 26.25rem;
+  border-radius: 3.125rem;
+  overflow: hidden;
+}
+.revenue-list .list-figure {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.revenue-list .list-figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.revenue-list .list-area02 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 3.125rem 0 3.75rem 3.25rem;
+  border-radius: 3.125rem;
+  background-color: #fff;
 }
 
 .revenue-badge {
-  background: url(../img/chance-badge.webp) no-repeat center / cover;
+  position: absolute;
   display: flex;
   flex-direction: column;
+  background: url(../img/chance-badge.webp) no-repeat center / cover;
   width: 11.8125rem;
   height: 11.75rem;
+  top: -4.875rem;
+  right: -2.5625rem;
   justify-content: center;
   text-align: center;
 }
