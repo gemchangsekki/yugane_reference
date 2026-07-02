@@ -81,13 +81,13 @@ html, body {
   cursor: pointer;
 }
 
-/* revenue-sec */
-.revenue-sec {
+/* cost-sec */
+.cost-sec {
   width: 100%;
   min-height: 62.5rem;
   background-color: aqua;
 }
-.revenue-sec-wrap {
+.cost-sec-wrap {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -95,8 +95,8 @@ html, body {
   background-color: salmon;
 }
 
-/* revenue-sec-left */
-.revenue-sec-left {
+/* cost-sec-left */
+.cost-sec-left {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -106,40 +106,40 @@ html, body {
   background-color: yellow;
   overflow: hidden;
 }
-.revenue-sec-left-desc-box {
+.cost-sec-left-desc-box {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-bottom: 3.375rem;
 }
-.revenue-sec-left-title{
+.cost-sec-left-title{
   margin-bottom: 1.625rem;
 }
-.revenue-sec-left-title .desc-60 {
+.cost-sec-left-title .desc-60 {
   font-size: 3.75rem;
   letter-spacing: -0.04em;
   line-height: 1.16;
 }
-.revenue-sec-left-title .desc-70 {
+.cost-sec-left-title .desc-70 {
   font-size: 4.375rem;
   letter-spacing: -0.04em;
   line-height: 1.14;
 }
 
-.revenue-sec-left-title .desc-70 .primary {
+.cost-sec-left-title .desc-70 .primary {
   font-weight: 700;
   color: #f55313;
 }
-.revenue-sec-left-title .desc-70 .secondary {
+.cost-sec-left-title .desc-70 .secondary {
   font-weight: 700;
 }
-.revenue-sec-left-desc {
+.cost-sec-left-desc {
   font-size: 1.25rem;
 }
-.revenue-sec-left-desc em {
+.cost-sec-left-desc em {
   font-weight: 700;
 }
-.revenue-sec-left-chat-box {
+.cost-sec-left-chat-box {
   width: 20.625rem;
   height: 16.625rem;
   padding-top: 2.125rem;
@@ -148,13 +148,13 @@ html, body {
   text-align: center;
   z-index: 5;
 }
-.revenue-sec-left-chat-box-title {
+.cost-sec-left-chat-box-title {
   font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1.44;
 }
-.revenue-sec-left-chat-box-answer {
+.cost-sec-left-chat-box-answer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,7 +166,7 @@ html, body {
   letter-spacing: -0.04em;
   line-height: 1.5;
 }
-.revenue-sec-left-chat-box-answer::before {
+.cost-sec-left-chat-box-answer::before {
   content: "";
   display: block;
   width: 0.5rem;
@@ -174,7 +174,7 @@ html, body {
   border-radius: 50%;
   background-color: #2a9a30;
 }
-.revenue-sec-chat-box-circle {
+.cost-sec-chat-box-circle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,38 +186,38 @@ html, body {
   background-color: #ffc7c1;
   cursor: pointer;
 }
-.revenue-sec-chat-box-circle:hover {
+.cost-sec-chat-box-circle:hover {
   transform: scale(1.05);
 }
-.revenue-sec-chat-box-desc {
+.cost-sec-chat-box-desc {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1.5;
 }
-.revenue-sec-left-food-img {
+.cost-sec-left-food-img {
   position: absolute;
   top: 31.875rem;
   left: calc(50% - 32.5rem);
   z-index: 3;
 }
-.revenue-sec-left-food-img img {
+.cost-sec-left-food-img img {
   width: 63.4375rem;
 }
 
-/* revenue-sec-right */
-.revenue-sec-right {
+/* cost-sec-right */
+.cost-sec-right {
   width: 50%;
   height: 62.5rem;
   padding-top: 6.25rem;
   background-color: peachpuff;
   overflow: hidden;
 }
-.revenue-sec-right-desc-box {
+.cost-sec-right-desc-box {
   margin-bottom: 3.125rem;
   text-align: center;
 }
-.revenue-sec-right-desc-box-label {
+.cost-sec-right-desc-box-label {
   font-size: 1.875rem;
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -225,7 +225,7 @@ html, body {
   margin-bottom: 0.625rem;
   color: #f55313;
 }
-.revenue-sec-right-desc-box-value {
+.cost-sec-right-desc-box-value {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,7 +243,7 @@ html, body {
 }
 
 /* swiper */
-.revenue-swiper {
+.cost-sec-swiper {
   position: relative;
   display: block;
   margin-left: auto;
@@ -269,4 +269,9 @@ html, body {
   position: absolute;
   top: 72.2786647315%;
   left: 22.1532091097%;
+}
+
+/* revenue-sec */
+.revenue-sec {
+  padding: 6.25rem 0;
 }

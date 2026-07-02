@@ -19,11 +19,11 @@ heroSecBtn.forEach((button, index) => {
   })
 })
 
-const swiper = new Swiper(".revenue-sec-swiper", {
-  // autoplay: {
-  //   delay: 2000,
-  // },
-  // spaceBetween: 1,
+const swiper = new Swiper(".cost-sec-swiper", {
+  autoplay: {
+    delay: 3500,
+  },
+  spaceBetween: 30,
   slidePerView: 'auto',
   setOffsetAfter: 0,
   setOffsetBefore: 0,
