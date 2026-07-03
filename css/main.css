@@ -340,8 +340,41 @@ html, body {
 .list-info {
   color: #e02a1d;
 }
+.revenue-sales-box .box-label {
+  font-size: 1.25rem;
+  letter-spacing: -0.04em;
+  line-height: 1.5;
+}
+.box-after .box-label {
+  margin-bottom: 0.75rem;
+}
+.box-after-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.25;
+}
+.box-after-value > .box-highlight {
+  position: relative;
+  z-index: 0;
+  color: #fff;
+}
+.box-after-value > .box-highlight::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -0.125rem -1.25rem;
+  background-color: #e02a1d;
+}
+.box-before-value {
+  font-size: 2.1875rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.28;
+}
 .revenue-list .list-info-title {
   font-size: 1.875rem;
+  font-weight: 700;
   letter-spacing: -0.04em;
   margin-bottom: 0.125rem;
 }
