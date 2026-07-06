@@ -475,3 +475,15 @@ html, body {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+
+/* food-card-menu */
+.food-card-area {
+  display: flex;
+  justify-content: center;
+}
+.food-card {
+  flex-shrink: 0;
+  width: calc(35.625rem * 3);
+  min-width: 0;
+  overflow: visible;
+}
