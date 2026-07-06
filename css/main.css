@@ -425,11 +425,11 @@ html, body {
   width: max-content;
 }
 .track01 {
-  animation: flow-right 19s linear infinite;
+  animation: flow-right 23s linear infinite;
 }
-/* .track02 {
-  animation: flow-left 14s linear infinite;
-} */
+.track02 {
+  animation: flow-left 23s linear infinite;
+}
 .flow-item {
   display: flex;
   flex-shrink: 0;
