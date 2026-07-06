@@ -403,3 +403,31 @@ html, body {
   letter-spacing: -0.04em;
   line-height: 1.41;
 }
+
+/* flow-text-sec */
+.flow-text-wrap {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  opacity: .25;
+}
+.text-track {
+  display: flex;
+  
+}
+.sub-text {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.56;
+}
+.main-text {
+  font-size: 3.75rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.16;
+}
+.main-text::before {
+  content: "# ";
+  color: #f55313;
+}
