@@ -409,13 +409,23 @@ html, body {
   position: relative;
   padding: 13.75rem 0 7.5rem;
 }
-
+.flow-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.flow-logo img {
+  width: 27.4375rem;
+}
 .flow-text-wrap {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 5.3125rem;
   width: 100%;
+  margin-bottom: 5.875rem;
   overflow: hidden;
   text-align: center;
   opacity: .25;
