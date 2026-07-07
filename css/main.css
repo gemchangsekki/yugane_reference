@@ -544,3 +544,28 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+
+/* rolling-card-sec */
+.rolling-card-sec {
+  padding: 5.625rem;
+}
+.rolling-card-head {
+  margin-bottom: 3.125rem;
+  text-align: center;
+}
+.rolling-card-title {
+  margin-bottom: 1.625rem;
+  font-size: 4.375rem;
+  letter-spacing: -0.04em;
+  line-height: 1.14;
+}
+.rolling-card-title em {
+  font-weight: 700;
+}
+.rolling-card-desc {
+  font-size: 1.25rem;
+  letter-spacing: -0.04em;
+}
+.rolling-card-desc em {
+  font-weight: 700;
+}
