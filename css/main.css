@@ -575,6 +575,7 @@ html, body {
 }
 .rolling-card-flow .flow-items {
   display: inline-flex;
+  animation: flow-left 40s linear infinite;
 
 }
 .rolling-card-flow .flow-items .flow-item {
