@@ -547,7 +547,7 @@ html, body {
 
 /* rolling-card-sec */
 .rolling-card-sec {
-  padding: 5.625rem;
+  padding: 5.625rem 0;
 }
 .rolling-card-head {
   margin-bottom: 3.125rem;
@@ -568,4 +568,24 @@ html, body {
 }
 .rolling-card-desc em {
   font-weight: 700;
+}
+.rolling-card-flow {
+  position: relative;
+  overflow: hidden;
+}
+.rolling-card-flow .flow-items {
+  display: inline-flex;
+
+}
+.rolling-card-flow .flow-items .flow-item {
+  margin-right: 5rem;
+}
+.rolling-card-flow .flow-items .flow-item img {
+  width: 20rem;
+  aspect-ratio: 320 / 470;
+  border-radius: 2.5rem;
+  vertical-align: middle;
+}
+.rolling-card-flow .flow-items .flow-item:nth-child(2n) {
+  margin-top: 3.125rem;
 }
