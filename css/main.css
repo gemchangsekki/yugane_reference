@@ -592,3 +592,25 @@ html, body {
 }
 
 /* footer */
+.footer {
+  padding: 2rem 0 3rem;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100rem;
+  padding: 0 1.875rem;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+.footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.25rem;
+  font-size: 1.125rem;
+  letter-spacing: -0.04em;
+  line-height: 1.44;
+}
+.footer-sns-list {
+  display: flex;
+}
