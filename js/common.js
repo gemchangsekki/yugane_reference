@@ -3,6 +3,7 @@ const navigation = document.querySelector(".navigation");
 const heroSec = document.getElementById("hero-sec");
 const heroSecBtn = document.querySelectorAll("#hero-sec-btn");
 
+AOS.init();
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
 
