@@ -611,6 +611,33 @@ html, body {
   letter-spacing: -0.04em;
   line-height: 1.44;
 }
+.footer-copy {
+  font-size: 1.125rem;
+  letter-spacing: -0.04em;
+  line-height: 1.44;
+}
+.footer-area02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
 .footer-sns-list {
   display: flex;
+  justify-content: end;
+  gap: 1.25rem;
+}
+.policy-items {
+  display: flex;
+  gap: 1.625rem;
+  font-size: 1.125rem;
+  letter-spacing: -0.04;
+  line-height: 1.44;
+}
+.policy-item:nth-child(1) {
+  font-weight: 700;
+}
+.policy-item a {
+  text-decoration: none;
+  color: #000;
 }
