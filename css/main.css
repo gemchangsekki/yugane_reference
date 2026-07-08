@@ -1,3 +1,8 @@
+:root {
+  /* colors */
+  --color-light-gray: #fbfaf5;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -589,6 +594,12 @@ html, body {
 }
 .rolling-card-flow .flow-items .flow-item:nth-child(2n) {
   margin-top: 3.125rem;
+}
+
+/* inquery-sec */
+.inquery-sec {
+  padding: 6.875rem 1.875rem;
+  background-color: #fbfaf5;
 }
 
 /* footer */

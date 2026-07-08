@@ -597,6 +597,26 @@
           </ul>
         </div>
       </section>
+      <section class="inquery-sec">
+        <div class="inquery-box">
+          <div class="inquery-head">
+            <h3 class="inquery-title">가맹문의</h3>
+          </div>
+          <div class="inquery-inner">
+            <div class="inquery-form-container">
+              <div class="responsive-inner">
+                <!-- method 속성은 대소문자 구별없이 사용 가능하지만 HTTP 표준 준수와 코드 가독성을 위해 대문자로 작성된다. -->
+                <form action="/franchise/write" method="POST" class="inquery-board-form">
+                  <input type="hidden">
+                  <fieldset class="inquery-policy-fieldset"></fieldset>
+                  <fieldset class="inquery-items-fieldset"></fieldset>
+                  <button class="inquery-form-submit btn-inquery-submit">신청하기</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer-inner">
@@ -615,9 +635,7 @@
             <span class="footer-designed">
               <a href="#">
                 <span class="footer-designed-item footer-designed-by">Designed By</span>
-                <span class="footer-designed-item footer-designed-logo">
-
-                </span>
+                <span class="footer-designed-item footer-designed-logo">Creative view</span>
               </a>
             </span>
           </p>
