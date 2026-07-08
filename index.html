@@ -597,20 +597,54 @@
           </ul>
         </div>
       </section>
-      <section class="inquery-sec">
-        <div class="inquery-box">
-          <div class="inquery-head">
-            <h3 class="inquery-title">가맹문의</h3>
+      <section class="inquiry-sec">
+        <div class="inquiry-box">
+          <div class="inquiry-head">
+            <h3 class="inquiry-title">가맹문의</h3>
           </div>
-          <div class="inquery-inner">
-            <div class="inquery-form-container">
+          <div class="inquiry-inner">
+            <div class="inquiry-form-container">
               <div class="responsive-inner">
                 <!-- method 속성은 대소문자 구별없이 사용 가능하지만 HTTP 표준 준수와 코드 가독성을 위해 대문자로 작성된다. -->
-                <form action="/franchise/write" method="POST" class="inquery-board-form">
+                <form action="/franchise/write" method="POST" class="inquiry-board-form">
                   <input type="hidden">
-                  <fieldset class="inquery-policy-fieldset"></fieldset>
-                  <fieldset class="inquery-items-fieldset"></fieldset>
-                  <button class="inquery-form-submit btn-inquery-submit">신청하기</button>
+                  <fieldset class="inquiry-policy-fieldset">
+                    <legend class="visually-hidden">개인정보수집 동의</legend>
+                    <div class="inquiry-policy-check">
+                      <input type="checkbox" class="inquiry-policy-input" id="inquiry-agree" required data-alert="개인정보수집에 동의해주세요.">
+                      <label for="checkbox" class="inquiry-policy-label">
+                        <p class="inquiry-policy-text">
+                          <a href="#none" class="inquiry-policy-text-link btn-policy-modal-open">개인정보처리방침</a>
+                          을 읽었으며 이에 동의합니다.
+                        </p>
+                      </label>
+                    </div>
+                    <button class="inquiry-policy-link btn-policy-modal-open" data-type="privacy">전문보기</button>
+                  </fieldset>
+                  <fieldset class="inquiry-items-fieldset">
+                    <legend class="inquiry-items-legend">
+                      <p class="inquiry-items-title">상담자 정보</p>
+                      <p class="inquiry-items-note inquiry-required">동그라미 표시는 필수입력항목입니다.</p>
+                    </legend>
+                    <ul class="inquiry-items">
+                      <li class="inquiry-item">
+                        <label for="inquiry-input-name" class="inquiry-label inquiry-required">이름</label>
+                        <input type="text" name="name" class="inquiry-input" id="inquiry-input-name" required data-alert="이름을 입력하세요.">
+                      </li>
+                      <li class="inquiry-item">
+                        <label for="inquiry-input-tel" class="inquiry-label inquiry-required">연락처</label>
+                        <input type="number" name="hp" class="inquiry-input" id="inquiry-input-tel" required data-alert="연라처를 입력하세요." data-rule="mobile">
+                      </li>
+                      <li class="inquiry-item">
+                        <label for="inquiry-input-local" class="inquiry-label inquiry-required">창업희망지역</label>
+                        <input type="text" name="hope_loc" class="inquiry-input" id="inquiry-input-local" required data-alert="창업희망지역을 입력하세요.">
+                      </li>
+                      <li class="inquiry-item"></li>
+                      <li class="inquiry-item"></li>
+                      <li class="inquiry-item"></li>
+                    </ul>
+                  </fieldset>
+                  <button class="inquiry-form-submit btn-inquiry-submit">신청하기</button>
                 </form>
               </div>
             </div>
