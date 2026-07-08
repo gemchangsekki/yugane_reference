@@ -631,12 +631,48 @@ html, body {
   margin: 0 auto;
 }
 .inquiry-policy-fieldset {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 5rem;
   margin-bottom: 3.125rem;
   padding: 0 3.125rem;
   border: 1px solid #ccc;
   background-color: #fff;
   color: #191a1a;
+}
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 , 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+}
+.inquiry-policy-icon {
+  width: 2.1875rem;
+}
+.inquiry-policy-label {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+}
+.inquiry-policy-text {
+  font-size: 1.125rem;
+}
+.inquiry-policy-text-link {
+  pointer-events: none;
+  text-decoration: none;
+  color: #191a1a;
+}
+.inquiry-policy-link {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  background-color: #ebebeb;
+  color: #151515;
+  border: none;
 }
 
 /* footer */
