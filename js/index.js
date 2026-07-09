@@ -14,6 +14,13 @@ window.addEventListener("scroll", () => {
   }
 });
 
+const chatbotWrap = document.querySelector(".chatbot-wrap");
+const chatbotToggleBtn = document.querySelector(".chatbot-toggle-btn");
+
+chatbotToggleBtn.addEventListener("click", () => {
+  chatbotWrap.classList.toggle("display-none");
+})
+
 heroSecBtn.forEach((button, index) => {
   button.addEventListener("click", () => {
   heroSec.style.background = `url("img/hero-img${index}.png")  no-repeat center / cover`;

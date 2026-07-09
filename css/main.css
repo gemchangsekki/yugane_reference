@@ -74,13 +74,14 @@ html, body {
 .chatbot-input-btn-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  justify-content: end;
+  justify-content: flex-end;
+  gap: 6px;
 }
 .chatbot-input-btn-wrap button {
-  padding: 5px 10px;
-  font-size: 0.85rem;
+  padding: 9px 13px;
+  font-size: 1rem;
   border-radius: 30px;
+  cursor: pointer;
   border: 1px solid #ccc;
 }
 .chatbot-toggle-btn {
