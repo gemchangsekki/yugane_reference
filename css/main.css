@@ -107,9 +107,44 @@ html, body {
 }
 .chatbot-toggle-btn {
   position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  height: 68px;
   right: 5.125rem;
   bottom: 5.125rem;
   z-index: 5;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  animation: flow-up-down 1s ease-in infinite alternate;
+}
+.chatbot-toggle-btn-text {
+  font-size: 12px;
+}
+.chatbot-toggle-btn.active {
+  display: flex;
+}
+.chatbot-toggle-btn-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.chatbot-toggle-btn:hover {
+  color: #fff;
+  background-color: #f55313;
+  animation: none;
+}
+
+@keyframes flow-up-down {
+  0% {
+    transform: translateY(14%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* navigation */

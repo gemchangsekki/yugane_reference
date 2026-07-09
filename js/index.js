@@ -4,6 +4,7 @@ const heroSec = document.getElementById("hero-sec");
 const heroSecBtn = document.querySelectorAll("#hero-sec-btn");
 
 AOS.init();
+
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
 
@@ -14,12 +15,23 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const chatbotWrap = document.querySelector(".chatbot-wrap");
-const chatbotToggleBtn = document.querySelector(".chatbot-toggle-btn");
+// chatbot button (".chatbot-toggle-btn")
+// const chatbotWrap = document.querySelector(".chatbot-wrap");
+// const chatbotToggleBtn = document.querySelector(".chatbot-toggle-btn");
 
-chatbotToggleBtn.addEventListener("click", () => {
-  chatbotWrap.classList.toggle("display-none");
-})
+// chatbotToggleBtn.addEventListener("click", () => {
+//   chatbotWrap.classList.toggle("display-none");
+// })
+
+const chatbotToggleBtn = document.querySelectorAll(".chatbot-toggle-btn");
+
+chatbotToggleBtn.forEach(btn => {
+  btn.addEventListener("click", () => {
+    chatbotToggleBtn.forEach(b => {
+      b.classList.toggle("active");
+    });
+  });
+});
 
 heroSecBtn.forEach((button, index) => {
   button.addEventListener("click", () => {
