@@ -865,7 +865,7 @@ html, body {
 .inquiry-input, .inquiry-textarea {
   border: 1px solid #ccc;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 0.75rem;
 }
 .inquiry-input {
   width: 21.875rem;
