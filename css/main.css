@@ -15,6 +15,10 @@ html, body {
   width: 100%;
 }
 
+.swiper, .swiper-slide {
+  z-index: 1;
+}
+
 /* navigation */
 .navigation {
   position: fixed;
@@ -801,3 +805,12 @@ html, body {
 }
 
 /* chatbot */
+.chatbot-wrap {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 450px;
+  height: 500px;
+  z-index: 5;
+  background-color: skyblue;
+}
