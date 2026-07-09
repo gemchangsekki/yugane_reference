@@ -120,6 +120,8 @@ html, body {
   border: 0;
   cursor: pointer;
   animation: flow-up-down 1s ease-in infinite alternate;
+  color: #fff;
+  background-color: #f55313;
 }
 .chatbot-toggle-btn-text {
   font-size: 12px;
@@ -134,7 +136,7 @@ html, body {
 
 .chatbot-toggle-btn:hover {
   color: #fff;
-  background-color: #f55313;
+  background-color: #e02a1d;
   animation: none;
 }
 
