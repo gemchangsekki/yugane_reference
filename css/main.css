@@ -1,6 +1,8 @@
 :root {
   /* colors */
   --color-light-gray: #fbfaf5;
+  --color-text-black: #151515;
+  --color-text-link-hover: #31b8b7;
 }
 
 * {
@@ -889,9 +891,11 @@ html, body {
   background-color: #e02a1d;
   color: #ebebeb;
 }
+
 /* footer */
 .footer {
   padding: 2rem 0 3rem;
+  background-color: var(--color-light-gray);
 }
 .footer-inner {
   display: flex;
@@ -905,14 +909,23 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   column-gap: 1.25rem;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
+  letter-spacing: -0.04em;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+.footer-copy {
+  font-size: 0.875rem;
   letter-spacing: -0.04em;
   line-height: 1.44;
 }
-.footer-copy {
-  font-size: 1.125rem;
-  letter-spacing: -0.04em;
-  line-height: 1.44;
+
+.footer-designed > a {
+  text-decoration: none;
+  color: var(--color-text-black);
+}
+.footer-designed > a:hover {
+  color: var(--color-text-link-hover);
 }
 .footer-area02 {
   display: flex;
@@ -928,8 +941,8 @@ html, body {
 .policy-items {
   display: flex;
   gap: 1.625rem;
-  font-size: 1.125rem;
-  letter-spacing: -0.04;
+  font-size: 0.875rem;
+  letter-spacing: -0.04em;
   line-height: 1.44;
 }
 .policy-item:nth-child(1) {
