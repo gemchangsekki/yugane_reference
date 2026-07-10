@@ -225,14 +225,12 @@ html, body {
 .cost-sec {
   width: 100%;
   min-height: 62.5rem;
-  background-color: aqua;
 }
 .cost-sec-wrap {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
-  background-color: salmon;
 }
 
 /* cost-sec-left */
@@ -243,7 +241,7 @@ html, body {
   width: 50%;
   height: 62.5rem;
   padding-top: 6.25rem;
-  background-color: yellow;
+  background-color: #edc19d;
   overflow: hidden;
 }
 .cost-sec-left-desc-box {
@@ -350,7 +348,7 @@ html, body {
   width: 50%;
   height: 62.5rem;
   padding-top: 6.25rem;
-  background-color: peachpuff;
+  background-color: #fff;
   overflow: hidden;
 }
 .cost-sec-right-desc-box {
@@ -872,6 +870,10 @@ html, body {
   height: 3.125rem;
   padding: 0 0.625rem;
   font-size: 1rem;
+}
+#inquiry-input-tel::-webkit-outer-spin-button,
+#inquiry-input-tel::-webkit-inner-spin-button {
+  appearance: none;
 }
 .inquiry-textarea {
   flex-grow: 1;

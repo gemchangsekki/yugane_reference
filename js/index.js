@@ -67,3 +67,29 @@ const foodCardSwiper = new Swiper(".food-card", {
   effect: 'creative',
   loop: true,
 });
+
+// input 전화번호 자동 하이픈 추가
+let autoHyphen = (userPhoneNumber) => {
+  // 숫자 외의 모든 문자(기존 하이픈 등) 제거
+  userPhoneNumber = userPhoneNumber.replace(/[^0-9]/g, '');
+
+  if(userPhoneNumber.length < 4) {
+    return userPhoneNumber;
+  } else if(userPhoneNumber.length < 7) {
+    // 010-123 형태로 반환
+    return userPhoneNumber.replace(/(\d{3})(\d{1,3})/, '$1-$2');
+  } else if(userPhoneNumber.length < 11) {
+    // 010-123-4567 혹은 02-123-4567로 반환
+    return userPhoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+  } else {
+    // 010-1234-5678 형태로 반환 (최대 11자리)
+    // 11자리가 넘어가면 자름
+    return userPhoneNumber.slice(0, 11).replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+  }
+};
+
+let userPhoneNumber = document.querySelector('#inquiry-input-tel');
+
+userPhoneNumber.oninput = (e) => {
+  e.target.value = autoHyphen(e.target.value);
+};
