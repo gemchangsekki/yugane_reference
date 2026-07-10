@@ -6,6 +6,7 @@ const heroSecBtn = document.querySelectorAll("#hero-sec-btn");
 AOS.init();
 
 const sections = document.querySelectorAll("#hero-sec, #cost-sec, #revenue-sec, #flow-text-sec, #rolling-card-sec, #inquiry-sec");
+const menuItems = document.querySelectorAll(".nav-bar > ul > li");
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
@@ -15,6 +16,24 @@ window.addEventListener("scroll", () => {
   } else {
     navigation.style.display = "none";
   }
+
+  // 현재 section 위치
+  let currentId = "";
+
+  sections.forEach((section) => {
+    if(scrollY >= section.offsetTop - 150) {
+      currentId = section.id;
+    }
+  });
+
+  menuItems.forEach((item) => {
+    item.classList.remove("menu-active")
+
+    const link = item.querySelector("a");
+    if(link.getAttribute("href") === "#" + currentId) {
+      item.classList.add("menu-active");
+    }
+  });
 });
 
 // chatbot button (".chatbot-toggle-btn")

@@ -184,6 +184,9 @@ html, body {
 .nav-bar a:hover {
   color: var(--color-accent);
 }
+.menu-active a {
+  color: var(--color-accent);
+}
 
 /* hero-sec */
 .hero-sec {
