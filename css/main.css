@@ -1,7 +1,9 @@
 :root {
   /* colors */
+  --color-white: #fff;
   --color-light-gray: #fbfaf5;
   --color-text-black: #151515;
+  --color-accent: #f55313;
   --color-text-link-hover: #31b8b7;
 }
 
@@ -176,6 +178,10 @@ html, body {
 
 .nav-bar a {
   text-decoration: none;
+  color: var(--color-white);
+}
+.nav-bar a:hover {
+  color: var(--color-accent);
 }
 
 /* hero-sec */
