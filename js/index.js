@@ -116,16 +116,3 @@ let autoHyphen = (userPhoneNumber) => {
     return userPhoneNumber.slice(0, 11).replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
   }
 };
-
-const policyCheckbox = document.querySelector(".inquiry-policy-input");
-const policyCheck = document.querySelector(".inquiry-policy-check");
-
-policyCheck.addEventListener("click", (e) => {
-  
-});
-
-let userPhoneNumber = document.querySelector('#inquiry-input-tel');
-
-userPhoneNumber.oninput = (e) => {
-  e.target.value = autoHyphen(e.target.value);
-};
