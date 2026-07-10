@@ -806,6 +806,9 @@ html, body {
   width: 24px;
   /* width: 2.1875rem; */
 }
+/* .inquiry-policy-icon.active {
+
+} */
 .inquiry-policy-label {
   display: flex;
   gap: 6px;
