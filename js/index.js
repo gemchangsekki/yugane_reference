@@ -5,6 +5,8 @@ const heroSecBtn = document.querySelectorAll("#hero-sec-btn");
 
 AOS.init();
 
+const sections = document.querySelectorAll("#hero-sec, #cost-sec, #revenue-sec, #flow-text-sec, #rolling-card-sec, #inquiry-sec");
+
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
 
