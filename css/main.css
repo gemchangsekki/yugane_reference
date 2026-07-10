@@ -401,6 +401,10 @@ html, body {
   overflow: hidden;
   padding: 0;
 }
+/* .cost-sec-swiper > .swiper-wrapper > .swiper-slide-prev,
+.cost-sec-swiper > .swiper-wrapper > .swiper-slide-next {
+  transform: translateZ(10%);
+} */
 .swiper-wrapper {
   position: relative;
   display: flex;

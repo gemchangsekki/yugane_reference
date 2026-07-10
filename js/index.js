@@ -64,6 +64,14 @@ const costSecSwiper = new Swiper(".cost-sec-swiper", {
   autoplay: {
     delay: 3500,
   },
+  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 15,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  },
   spaceBetween: 30,
   slidesPerView: 'auto',
   centeredSlides: true,
