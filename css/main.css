@@ -754,6 +754,13 @@ html, body {
   to { transform: translateX(-50%); }
 }
 
+/* flow-text-sec 500px */
+@media(max-width: 500px) {
+  .flow-logo img {
+    width: 18.75rem;
+  }
+}
+
 /* food-card-menu */
 .food-card-menu {
   display: flex;
@@ -763,7 +770,6 @@ html, body {
   flex-shrink: 0;
   width: calc(35.625rem * 3);
   /* min-width: 0; */
-  width: 100%;
   overflow: hidden;
 }
 .food-card .swiper {
@@ -822,6 +828,15 @@ html, body {
   gap: 1.25rem;
   justify-content: center;
   align-items: center;
+}
+
+/* food-card-menu 500px */
+@media(max-width: 500px) {
+  .food-card {
+    flex-shrink: 0;
+    width: calc(21.875rem * 3);
+    overflow: hidden;
+  }
 }
 
 /* rolling-card-sec */
