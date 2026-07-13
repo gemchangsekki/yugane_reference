@@ -55,6 +55,17 @@ moNavH2.addEventListener("click", () => {
   moNavUl.classList.toggle("is-open")
 });
 
+const moNavLink = document.querySelectorAll(".mo-nav-link");
+
+// 메뉴 링크 클릭 후 메뉴 창을 닫는 기능
+moNavLink.forEach(link => {
+  link.addEventListener("click", (e) => {
+    menuBtn.classList.remove("is-open");
+    moNavBox.classList.remove("is-open");
+    moNavUl.classList.remove("is-open");
+  })
+});
+
 // chatbot button (".chatbot-toggle-btn")
 // const chatbotWrap = document.querySelector(".chatbot-wrap");
 // const chatbotToggleBtn = document.querySelector(".chatbot-toggle-btn");
