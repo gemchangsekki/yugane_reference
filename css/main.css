@@ -884,6 +884,16 @@ html, body {
   margin-top: 3.125rem;
 }
 
+/* rolling-card-sec 500px */
+@media(max-width: 500px) {
+  .rolling-card-flow .flow-items .flow-card-item img {
+    width: 15.625rem;
+    aspect-ratio: 320 / 470;
+    border-radius: 2.5rem;
+    vertical-align: middle;
+  }
+}
+
 /* inquiry-sec */
 .inquiry-sec {
   padding: 6.875rem 1.875rem;
@@ -918,7 +928,7 @@ html, body {
   width: 100%;
   margin: 0 auto;
 }
-.inquiry-policy-fieldset {
+.inquiry-policy-fieldset.policy {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -974,9 +984,9 @@ html, body {
   border: none;
 }
 
-.inquiry-items-fieldset {
+/* .inquiry-items-fieldset {
   margin: 0 3.125rem;
-}
+} */
 .inquiry-required {
   position: relative;
 }
@@ -1052,6 +1062,38 @@ html, body {
   border-color: transparent;
   background-color: #e02a1d;
   color: #ebebeb;
+}
+
+/* inquiry-sec 500px */
+@media(max-width: 500px) {
+  .inquiry-items-fieldset.policy {
+    flex-direction: column;
+    padding: 14px 16px;
+  }
+  .inquiry-items-fieldset.input {
+    margin: 0;
+  }
+  .inquiry-items-legend {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.625rem;
+    margin-bottom: 2.25rem;
+  }
+  .inquiry-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.625rem;
+  }
+  .inquiry-label {
+    flex-shrink: 0;
+    width: 12.5rem;
+    padding-top: 1rem;
+    padding-left: 1.375rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.625rem;
+  }
 }
 
 /* footer */
