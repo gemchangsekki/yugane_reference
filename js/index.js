@@ -8,6 +8,7 @@ AOS.init();
 const sections = document.querySelectorAll("#hero-sec, #cost-sec, #revenue-sec, #flow-text-sec, #rolling-card-sec, #inquiry-sec");
 const menuItems = document.querySelectorAll(".nav-bar > ul > li");
 
+// nav-bar 스크롤시 보이는 기능
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
 
@@ -26,6 +27,7 @@ window.addEventListener("scroll", () => {
     }
   });
 
+  // 스크롤시 해당영역 nav-bar에 강조하는 기능
   menuItems.forEach((item) => {
     item.classList.remove("menu-active")
 
@@ -34,6 +36,23 @@ window.addEventListener("scroll", () => {
       item.classList.add("menu-active");
     }
   });
+});
+
+const menuBtn = document.querySelector(".menu-btn");
+const moNavBox = document.querySelector(".mo-nav-box");
+
+// 모바일 메뉴 버튼 토클 기능
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("is-open");
+  moNavBox.classList.toggle("is-open");
+});
+
+const moNavH2 = document.querySelector(".mo-nav-box h2");
+const moNavUl = document.querySelector(".mo-nav-box ul");
+
+// 모바일 메뉴 내에 메뉴 드롭다운 토글 기능
+moNavH2.addEventListener("click", () => {
+  moNavUl.classList.toggle("is-open")
 });
 
 // chatbot button (".chatbot-toggle-btn")

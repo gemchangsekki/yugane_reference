@@ -262,6 +262,14 @@ html, body {
     filter: brightness(0) invert(1);
     transform: rotateX(180deg);
   }
+  .mo-nav ul.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+  .mo-nav ul.is-open a {
+    display: block;
+    padding: 12px 0;
+  }
   .menu-btn {
     position: fixed;
     display: flex;
@@ -984,7 +992,7 @@ html, body {
 /* rolling-card-sec 500px */
 @media(max-width: 500px) {
   .rolling-card-title {
-  font-size: 3.625rem;
+  font-size: 2.625rem;
 }
   .rolling-card-flow .flow-items .flow-card-item img {
     width: 15.625rem;
