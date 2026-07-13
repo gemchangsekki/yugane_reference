@@ -495,10 +495,10 @@ html, body {
     overflow: hidden;
   }
   .cost-sec-left-title > .desc-60 {
-    font-size: 2.375rem;
+    font-size: 3rem;
   }
   .cost-sec-left-title .desc-70 {
-    font-size: 3rem;
+    font-size: 3.625rem;
   }
   .cost-sec-left-desc {
     font-size: 1.125rem;
@@ -655,8 +655,11 @@ html, body {
   line-height: 1.41;
 }
 
-/* revenue-sec */
+/* revenue-sec 500px */
 @media(max-width: 500px) {
+  .revenue-title {
+    font-size: 3.625rem;
+  }
   .revenue-list .list-item {
     position: relative;
     display: flex;
@@ -687,9 +690,12 @@ html, body {
     width: 9.3125rem;
     height: 9.25rem;
     top: -4.875rem;
-    right: -2.5625rem;
+    right: -1rem;
     justify-content: center;
     text-align: center;
+  }
+  .badge-value {
+    font-size: 2.625rem;
   }
 }
 
@@ -896,6 +902,9 @@ html, body {
 
 /* rolling-card-sec 500px */
 @media(max-width: 500px) {
+  .rolling-card-title {
+  font-size: 3.625rem;
+}
   .rolling-card-flow .flow-items .flow-card-item img {
     width: 15.625rem;
     aspect-ratio: 320 / 470;
@@ -1075,6 +1084,9 @@ html, body {
 
 /* inquiry-sec 500px */
 @media(max-width: 500px) {
+  .inquiry-title {
+    font-size: 3.25rem;
+  }
   .inquiry-policy-fieldset.policy {
     flex-direction: column;
     gap: 0.75rem;
