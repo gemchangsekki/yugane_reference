@@ -494,6 +494,16 @@ html, body {
     background-color: #edc19d;
     overflow: hidden;
   }
+  .cost-sec-left-title > .desc-60 {
+    font-size: 2.375rem;
+  }
+  .cost-sec-left-title .desc-70 {
+    font-size: 3rem;
+  }
+  .cost-sec-left-desc {
+    font-size: 1.125rem;
+  }
+  
   /* cost-sec-right */
   .cost-sec-right {
     width: 100%;
