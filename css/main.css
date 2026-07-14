@@ -240,8 +240,8 @@ html, body {
     width: 100%;
     height: 100dvh;
     padding: 80px 20px;
-    background-color: orange;
-    color: blue;
+    background-color: #f7f4ef;
+    color: var(--color-text-black);
     z-index: 10;
     animation: slide-in-left 0.4s ease-in;
   }
@@ -249,8 +249,13 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 2.9rem;
     font-size: 20px;
     cursor: pointer;
+  }
+  .mo-nav-box h2:hover {
+    color: var(--color-white);
+    background-color: var(--color-accent);
   }
   .mo-nav-box h2::after {
     content: "";
@@ -258,7 +263,7 @@ html, body {
     width: 16px;
     height: 9px;
     background: url(../img/menu_arrow.svg) no-repeat center / 100%;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); */
     transform: rotateX(180deg);
   }
   .mo-nav-box:has(ul.is-open) h2::after {
@@ -270,7 +275,13 @@ html, body {
   }
   .mo-nav ul.is-open a {
     display: block;
+    color: var(--color-text-black);
+    text-decoration: none;
     padding: 12px 0;
+  }
+  .mo-nav-link:hover, .mo-nav-box > ul > li > A:hover {
+    color: #fff;
+    background-color: var(--color-accent);
   }
   .menu-btn {
     position: fixed;
@@ -310,6 +321,11 @@ html, body {
   .menu-btn.is-open span:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
   }
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
 }
 
 /* hero-sec */
