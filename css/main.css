@@ -317,6 +317,7 @@ html, body {
 .hero-sec-img-list-item img {
   width: 100%;
   height: 100vh;
+  object-fit: cover;
 }
 .hero-sec-img-list-item.active {
   display: block;
@@ -365,8 +366,14 @@ html, body {
   font-weight: 700;
   font-size: 1.875rem;
   background-color: rgba(0, 0, 0, 0);
-  color: #fff;
+  color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
+}
+.hero-sec-btn:hover {
+  color: var(--color-white);
+}
+.hero-sec-btn.active {
+  color: var(--color-white);
 }
 
 /* hero-sec 500px */

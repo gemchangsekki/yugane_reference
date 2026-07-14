@@ -90,8 +90,10 @@ heroSecBtn.forEach((button, index) => {
   
   button.addEventListener("click", () => {
     heroSecImgListItem.forEach(li => li.classList.remove("active"));
+    heroSecBtn.forEach(btn => btn.classList.remove("active"));
 
     heroSecImgListItem[index].classList.add("active");
+    heroSecBtn[index].classList.add("active");
   });
 });
 
