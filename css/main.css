@@ -320,7 +320,7 @@ html, body {
 }
 .hero-sec-img-list-item.active {
   display: block;
-  animation: fade-in 0.6s ease-in-out;
+  animation: fade-in 1s ease-in-out;
 }
 
 @keyframes fade-in {
