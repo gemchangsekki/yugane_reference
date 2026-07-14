@@ -45,6 +45,10 @@ const moNavBox = document.querySelector(".mo-nav-box");
 menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("is-open");
   moNavBox.classList.toggle("is-open");
+  
+  if(moNavUl.classList.contains("is-open")) {
+    moNavUl.classList.remove("is-open");
+  }
 });
 
 const moNavH2 = document.querySelector(".mo-nav-box h2");
@@ -52,14 +56,14 @@ const moNavUl = document.querySelector(".mo-nav-box ul");
 
 // 모바일 메뉴 내에 메뉴 드롭다운 토글 기능
 moNavH2.addEventListener("click", () => {
-  moNavUl.classList.toggle("is-open")
+  moNavUl.classList.toggle("is-open");
 });
 
 const moNavLink = document.querySelectorAll(".mo-nav-link");
 
 // 메뉴 링크 클릭 후 메뉴 창을 닫는 기능
 moNavLink.forEach(link => {
-  link.addEventListener("click", (e) => {
+  link.addEventListener("click", () => {
     menuBtn.classList.remove("is-open");
     moNavBox.classList.remove("is-open");
     moNavUl.classList.remove("is-open");
