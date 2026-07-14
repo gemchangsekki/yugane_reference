@@ -263,8 +263,10 @@ html, body {
     width: 16px;
     height: 9px;
     background: url(../img/menu_arrow.svg) no-repeat center / 100%;
-    /* filter: brightness(0) invert(1); */
     transform: rotateX(180deg);
+  }
+  .mo-nav-box h2:hover::after {
+    filter: brightness(0) invert(1);
   }
   .mo-nav-box:has(ul.is-open) h2::after {
     transform: rotateX(0);
