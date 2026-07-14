@@ -222,6 +222,112 @@ html, body {
   display: none;
 }
 
+
+/* navigation 800px */
+@media(max-width: 800px) {
+  nav,
+  .nav-bar,
+  .mo-nav-box,
+  .mo-nav ul {
+    display: none;
+  }
+  .mo-nav {
+    display: block;
+  }
+  .mo-nav-box.is-open {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100dvh;
+    padding: 80px 20px;
+    background-color: #f7f4ef;
+    color: var(--color-text-black);
+    z-index: 10;
+    animation: slide-in-left 0.3s ease-in;
+  }
+  .mo-nav-box h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.9rem;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .mo-nav-box h2:hover {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+  }
+  .mo-nav-box h2::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 9px;
+    background: url(../img/menu_arrow.svg) no-repeat center / 100%;
+    transform: rotateX(180deg);
+  }
+  .mo-nav-box h2:hover::after {
+    filter: brightness(0) invert(1);
+  }
+  .mo-nav-box:has(ul.is-open) h2::after {
+    transform: rotateX(0);
+  }
+  .mo-nav ul.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+  .mo-nav ul.is-open a {
+    display: block;
+    color: var(--color-text-black);
+    text-decoration: none;
+    padding: 12px 0;
+  }
+  .mo-nav-link:hover, .mo-nav-box > ul > li > A:hover {
+    color: #fff;
+    background-color: var(--color-accent);
+  }
+  .menu-btn {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 15px;
+    right: 15px;
+    gap: 4px;
+    width: 44px;
+    height: 44px;
+    z-index: 10;
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 4px;
+  }
+  .menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--color-white);
+    border-radius: 4px;
+
+    transform-origin: center;
+    /* 변형(transform)의 기준점(축)을 어디로 할 거냐. */
+    transition: transform 0.35s;
+  }
+
+  .menu-btn.is-open span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+  }
+  .menu-btn.is-open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .menu-btn.is-open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}
+
+/* navigation 500px */
 @media(max-width: 500px) {
   nav,
   .nav-bar,
@@ -243,7 +349,7 @@ html, body {
     background-color: #f7f4ef;
     color: var(--color-text-black);
     z-index: 10;
-    animation: slide-in-left 0.4s ease-in;
+    animation: slide-in-left 0.3s ease-in;
   }
   .mo-nav-box h2 {
     display: flex;
@@ -612,6 +718,36 @@ html, body {
   left: 22.1532091097%;
 }
 
+/* cost-sec 800px */
+@media(max-width: 800px) {
+    /* cost-sec */
+  .cost-sec-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+   /* cost-sec-left */
+  .cost-sec-left {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 62.5rem;
+    padding-top: 6.25rem;
+    background-color: #edc19d;
+    overflow: hidden;
+  }
+  /* cost-sec-right */
+  .cost-sec-right {
+    width: 100%;
+    height: 62.5rem;
+    padding-top: 6.25rem;
+    background-color: #fff;
+    overflow: hidden;
+  }
+}
+
 /* cost-sec 500px */
 @media(max-width: 500px) {
   /* cost-sec */
@@ -791,6 +927,32 @@ html, body {
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1.41;
+}
+
+/* revenue-sec 800px */
+@media(max-width: 800px) {
+  .revenue-list .list-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .revenue-list .list-area01 {
+    position: relative;
+    width: 100%;
+    height: 26.25rem;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+  }
+  .revenue-list .list-area02 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 3.125rem 0 3.75rem 3.25rem;
+  border-radius: 0 0 20px 20px;
+  background-color: #fff;
+  }
 }
 
 /* revenue-sec 500px */
@@ -1140,9 +1302,9 @@ html, body {
   border: none;
 }
 
-/* .inquiry-items-fieldset {
-  margin: 0 3.125rem;
-} */
+.inquiry-items-fieldset {
+  width: 100%;
+}
 .inquiry-required {
   position: relative;
 }
