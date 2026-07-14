@@ -84,10 +84,15 @@ chatbotToggleBtn.forEach(btn => {
   });
 });
 
+// hero-sec-btn 클릭시 img 변경 기능
 heroSecBtn.forEach((button, index) => {
+  const heroSecImgListItem = document.querySelectorAll(".hero-sec-img-list-item");
+  
   button.addEventListener("click", () => {
-  heroSec.style.background = `url("img/hero-img${index}.png")  no-repeat center / cover`;
-  })
+    heroSecImgListItem.forEach(li => li.classList.remove("active"));
+
+    heroSecImgListItem[index].classList.add("active");
+  });
 });
 
 const costSecSwiper = new Swiper(".cost-sec-swiper", {
