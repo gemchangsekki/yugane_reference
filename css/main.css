@@ -329,7 +329,7 @@ html, body {
 }
 
 /* hero-sec */
-.hero-sec {
+.hero-section {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -351,7 +351,10 @@ html, body {
   from {opacity: 0;}
   to {opacity: 1;}
 }
-
+.header-wrap {
+  position: absolute;
+  width: 100%;
+}
 .header {
   padding-top: 3rem;
 }
