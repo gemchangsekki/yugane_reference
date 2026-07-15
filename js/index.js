@@ -138,6 +138,64 @@ const foodCardSwiper = new Swiper(".food-card", {
   loop: true,
 });
 
+function badgeValueCounter(duration) {
+  const badgeValue = document.querySelectorAll(".badge-value");
+
+  badgeValue.forEach((counter) => {
+    const target = parseInt(counter.getAttribute("data-target"), 10);
+    const start = 0;
+    let startTime = null;
+
+    function updateCounter(currentTime) {
+      if(!startTime) startTime = currentTime;
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+
+      const currentCount = Math.floor(progress * (target - start) + start);
+
+      counter.textContent = `${currentCount.toLocaleString()}%`;
+
+      if(progress < 1) {
+        requestAnimationFrame(updateCounter);
+      }
+    }
+    requestAnimationFrame(updateCounter);
+  });
+}
+
+const startCounterOnScroll = () => {
+  const revenueList = document.querySelectorAll(".revenue-list .list-item");
+  
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+
+    const triggerPoint = scrollY + window.innerHeight * 0.9;
+
+    revenueList.forEach((item) => {
+      
+      if(item.classList.contains("started")) return;
+
+      const itemOffsetTop = item.offsetTop;
+
+      if(triggerPoint >= itemOffsetTop) {
+        badgeValueCounter(800);
+
+        item.classList.add("started");
+      }
+    });
+
+    const allStarted = Array.from(revenueList).every(item => item.classList.contains("started"));
+    
+    if(allStarted) {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+};
+
+window.addEventListener("load", startCounterOnScroll);
+
 // input 전화번호 자동 하이픈 추가
 let autoHyphen = (userPhoneNumber) => {
   // 숫자 외의 모든 문자(기존 하이픈 등) 제거
