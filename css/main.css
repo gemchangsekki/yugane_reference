@@ -139,6 +139,9 @@ html, body {
 .chatbot-toggle-btn.active {
   display: flex;
 }
+.chatbot-toggle-btn.active.close {
+  animation: none;
+}
 .chatbot-toggle-btn-icon {
   width: 30px;
   height: 30px;
