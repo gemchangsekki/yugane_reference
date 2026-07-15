@@ -963,6 +963,24 @@ html, body {
   border-radius: 0 0 20px 20px;
   background-color: #fff;
   }
+  .revenue-badge {
+    width: 11.8125rem;
+    height: 11.75rem;
+    top: -4.875rem;
+    right: -0.5625rem;
+  }
+  .badge-value {
+    font-size: 3.25rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.16;
+  }
+  .badge-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.41;
+  }
 }
 
 /* revenue-sec 500px */
@@ -1078,6 +1096,12 @@ html, body {
 @keyframes flow-left {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
+}
+
+@media(max-width: 800px) {
+  .flow-logo img {
+    width: 21.875rem;
+  }
 }
 
 /* flow-text-sec 500px */
