@@ -1365,6 +1365,7 @@ html, body {
   border-radius: 10px;
 }
 .inquiry-input {
+  width: 100%;
   max-width: 21.875rem;
   height: 3.125rem;
   padding: 0 0.625rem;
