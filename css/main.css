@@ -1102,6 +1102,12 @@ html, body {
   .flow-logo img {
     width: 21.875rem;
   }
+  .sub-text {
+    font-size: 1.625rem;
+  }
+  .main-text {
+    font-size: 3.375rem;
+  }
 }
 
 /* flow-text-sec 500px */
@@ -1118,7 +1124,7 @@ html, body {
 }
 .food-card {
   flex-shrink: 0;
-  width: calc(35.625rem * 3);
+  width: calc(23.125rem * 3);
   /* min-width: 0; */
   overflow: hidden;
 }
@@ -1180,6 +1186,11 @@ html, body {
   align-items: center;
 }
 
+/* food-card-menu 800px */
+@media(max-width: 800px) {
+
+}
+
 /* food-card-menu 500px */
 @media(max-width: 500px) {
   .food-card {
@@ -1232,6 +1243,16 @@ html, body {
 }
 .rolling-card-flow .flow-items .flow-card-item:nth-child(2n) {
   margin-top: 3.125rem;
+}
+
+/* rolling-card-sec 800px */
+@media(max-width: 800px) {
+  .rolling-card-title {
+    font-size: 3.625rem;
+  }
+  .rolling-card-flow .flow-items .flow-card-item img {
+    width:16rem;
+  }
 }
 
 /* rolling-card-sec 500px */
@@ -1408,6 +1429,13 @@ html, body {
   border-color: transparent;
   background-color: #e02a1d;
   color: #ebebeb;
+}
+
+/* inquiry-sec 800px */
+@media(max-width: 800px) {
+  .inquiry-title {
+    font-size: 3.5rem;
+  }
 }
 
 /* inquiry-sec 500px */
