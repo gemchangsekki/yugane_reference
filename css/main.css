@@ -1463,13 +1463,13 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   column-gap: 1.25rem;
-  font-size: 1rem;
+  font-size: 0.75rem;
   letter-spacing: -0.04em;
   line-height: 1.6;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.125rem;
 }
 .footer-copy {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   letter-spacing: -0.04em;
   line-height: 1.44;
 }
@@ -1495,7 +1495,7 @@ html, body {
 .policy-items {
   display: flex;
   gap: 1.625rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   letter-spacing: -0.04em;
   line-height: 1.44;
 }
