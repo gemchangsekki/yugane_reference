@@ -138,60 +138,103 @@ const foodCardSwiper = new Swiper(".food-card", {
   loop: true,
 });
 
-function badgeValueCounter(duration) {
-  const badgeValue = document.querySelectorAll(".badge-value");
+// function badgeValueCounter(duration) {
+//   const badgeValue = document.querySelectorAll(".badge-value");
 
-  badgeValue.forEach((counter) => {
-    const target = parseInt(counter.getAttribute("data-target"), 10);
-    const start = 0;
-    let startTime = null;
+//   badgeValue.forEach((counter) => {
+//     const target = parseInt(counter.getAttribute("data-target"), 10);
+//     const start = 0;
+//     let startTime = null;
 
-    function updateCounter(currentTime) {
-      if(!startTime) startTime = currentTime;
-      const elapsedTime = currentTime - startTime;
-      const progress = Math.min(elapsedTime / duration, 1);
+//     function updateCounter(currentTime) {
+//       if(!startTime) startTime = currentTime;
+//       const elapsedTime = currentTime - startTime;
+//       const progress = Math.min(elapsedTime / duration, 1);
 
-      const currentCount = Math.floor(progress * (target - start) + start);
+//       const currentCount = Math.floor(progress * (target - start) + start);
 
-      counter.textContent = `${currentCount.toLocaleString()}%`;
+//       counter.textContent = `${currentCount.toLocaleString()}%`;
 
-      if(progress < 1) {
-        requestAnimationFrame(updateCounter);
-      }
+//       if(progress < 1) {
+//         requestAnimationFrame(updateCounter);
+//       }
+//     }
+//     requestAnimationFrame(updateCounter);
+//   });
+// }
+
+// 1. 단 하나의 요소를 받아서 카운트를 올리는 함수
+function badgeValueCounter(counterElement, duration) {
+  const target = parseInt(counterElement.getAttribute("data-target"), 10) || 0;
+  const start = 0;
+  let startTime = null
+
+  function updateCounter(currentTime) {
+
+    // 요소가 화면 밖으로 나가서 "started" 클래스가 사라지면 애니메이션 취소
+    if(!counterElement.classList.contains("started")) return;
+
+    if(!startTime) startTime = currentTime;
+
+    const elapsedTime = currentTime - startTime;
+    const progress = Math.min(elapsedTime / duration, 1)
+
+    const currentCount = Math.floor(progress * (target - start) + start);
+    counterElement.textContent = `${currentCount.toLocaleString()}%`;
+
+    if(progress < 1) {
+      requestAnimationFrame(updateCounter);
     }
-    requestAnimationFrame(updateCounter);
-  });
-}
+  }
 
+  requestAnimationFrame(updateCounter);
+};
+
+// 2. 스크롤 시 화면에 보이는 요소만 캐치하는 함수
 const startCounterOnScroll = () => {
+
+  // .revenue-list 안의 .list-item(혹은 badge-value 자체) 감지
   const revenueList = document.querySelectorAll(".revenue-list .list-item");
-  
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
 
-    const triggerPoint = scrollY + window.innerHeight * 0.9;
-
-    revenueList.forEach((item) => {
-      
-      if(item.classList.contains("started")) return;
-
-      const itemOffsetTop = item.offsetTop;
-
-      if(triggerPoint >= itemOffsetTop) {
-        badgeValueCounter(800);
-
-        item.classList.add("started");
-      }
-    });
-
-    const allStarted = Array.from(revenueList).every(item => item.classList.contains("started"));
-    
-    if(allStarted) {
-      window.removeEventListener("scroll", handleScroll);
-    }
+  const observerOptions = {
+    root: null,
+    threshold: 0.2,
   };
 
-  window.addEventListener("scroll", handleScroll);
+  const observerCallback = (entities) => {
+    entities.forEach((entry) => {
+      const item = entry.target;
+
+      // 실제 숫자가 올라갈 요소를 찾음
+      const counterElement = item.querySelector(".badge-value") || item;
+
+      // 1. 요소가 화면에 나타났을 때
+      if(entry.isIntersecting) {
+
+        // 이미 실행 중이 아닐 때만 실행
+        if(!item.classList.contains("started")) {
+          item.classList.add("started"); // 애니메이션 실행 상태 표시
+          counterElement.classList.add("started"); // 취소 플래그용 클래스 추가
+
+          // 핵심: 전체가 아니라 현재 화면에 들어온 '그 요소'만 넘겨서 실행!
+          badgeValueCounter(counterElement, 800);
+        }
+
+        // 2. 요소가 화면 밖으로 완전히 나갔을 때
+      } else {
+        if(item.classList.contains("started")) {
+          item.classList.remove("started");
+          counterElement.classList.remove("started"); // "started"를 지워 카운터 함수(updateCounter) 종료 유도
+
+          // 다시 스크롤해서 내려올 때를 위해 초기 상태로 리셋
+          counterElement.textContent = "0%";
+        }
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  revenueList.forEach((item) => observer.observe(item));
 };
 
 window.addEventListener("load", startCounterOnScroll);
