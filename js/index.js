@@ -138,31 +138,6 @@ const foodCardSwiper = new Swiper(".food-card", {
   loop: true,
 });
 
-// function badgeValueCounter(duration) {
-//   const badgeValue = document.querySelectorAll(".badge-value");
-
-//   badgeValue.forEach((counter) => {
-//     const target = parseInt(counter.getAttribute("data-target"), 10);
-//     const start = 0;
-//     let startTime = null;
-
-//     function updateCounter(currentTime) {
-//       if(!startTime) startTime = currentTime;
-//       const elapsedTime = currentTime - startTime;
-//       const progress = Math.min(elapsedTime / duration, 1);
-
-//       const currentCount = Math.floor(progress * (target - start) + start);
-
-//       counter.textContent = `${currentCount.toLocaleString()}%`;
-
-//       if(progress < 1) {
-//         requestAnimationFrame(updateCounter);
-//       }
-//     }
-//     requestAnimationFrame(updateCounter);
-//   });
-// }
-
 // 1. 단 하나의 요소를 받아서 카운트를 올리는 함수
 function badgeValueCounter(counterElement, duration) {
   const target = parseInt(counterElement.getAttribute("data-target"), 10) || 0;
