@@ -450,6 +450,11 @@ html, body {
   height: 50px;
   padding: 0 60px;
 }
+.top-header-logo, .language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .top-header-logo img {
   width: 30px;
   height: 30px;
@@ -459,6 +464,12 @@ html, body {
   max-width: 600px;
   display: flex;
   justify-content: space-between;
+}
+.header-list-item a {
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-text-black);
 }
 
 /* hero-sec */
