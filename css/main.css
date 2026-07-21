@@ -1161,7 +1161,8 @@ html, body {
 }
 .food-card {
   flex-shrink: 0;
-  width: calc(23.125rem * 3);
+  width: calc(35.625rem * 3);
+  /* width: calc(23.125rem * 3); */
   /* min-width: 0; */
   overflow: hidden;
 }
@@ -1225,7 +1226,9 @@ html, body {
 
 /* food-card-menu 800px */
 @media(max-width: 800px) {
-
+  .food-card {
+    width: calc(25rem * 3);
+  }
 }
 
 /* food-card-menu 500px */
