@@ -3,9 +3,9 @@
   --color-white: #fff;
   --color-light-gray: #fbfaf5;
   --color-text-black: #151515;
-  --color-bg-light-orange: #fefaf0;
   --color-accent: #f55313;
   --color-text-link-hover: #31b8b7;
+  --color-bg-gray-orange: #fff1eb;
 }
 
 * {
@@ -197,6 +197,7 @@ html, body {
   width: 100%;
   height: 50px;
   padding: 0 60px;
+  background-color: var(--color-white);
 }
 .top-header-logo, .language {
   display: flex;
@@ -1066,7 +1067,7 @@ html, body {
 .flow-text-sec {
   position: relative;
   padding: 13.75rem 0 7.5rem;
-  background-color: var(--color-bg-light-orange);
+  background-color: var(--color-bg-gray-orange);
 }
 .flow-logo {
   position: absolute;
@@ -1157,7 +1158,7 @@ html, body {
 .food-card-menu {
   display: flex;
   justify-content: center;
-  background-color: var(--color-bg-light-orange);
+  background-color: var(--color-bg-gray-orange);
 }
 .food-card {
   flex-shrink: 0;
@@ -1538,7 +1539,7 @@ html, body {
 /* footer */
 .footer {
   padding: 2rem 0 3rem;
-  background-color: var(--color-light-gray);
+  background-color: var(--color-bg-gray-orange);
 }
 .footer-inner {
   display: flex;
