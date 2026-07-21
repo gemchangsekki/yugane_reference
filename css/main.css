@@ -1234,9 +1234,7 @@ html, body {
 /* food-card-menu 500px */
 @media(max-width: 500px) {
   .food-card {
-    flex-shrink: 0;
     width: calc(21.875rem * 3);
-    overflow: hidden;
   }
 }
 
